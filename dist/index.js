@@ -1,20 +1,7 @@
-/* document.addEventListener('DOMContentLoaded', init);
-
-function init() {
-  const menuBtn = document.querySelector('.nav-btn');
-  const nav = document.querySelector('.nav');
-  let isActive = false;
-
-  menuBtn.addEventListener('click', function() {
-    const icon = this.querySelector('i');
-    isActive = !isActive;
-    icon.className = isActive ? 'fas fa-times' : 'fas fa-bars';
-    nav.classList.toggle('active');
-  });
-}; */
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
+
   const menuBtn = document.querySelector('.nav-btn');
   const nav = document.querySelector('.nav');
   let isActive = false;
@@ -25,10 +12,9 @@ function init() {
     icon.className = isActive ? 'fas fa-times' : 'fas fa-bars';
     nav.classList.toggle('active');
   });
-
   const db = [
     { id: 0, title: 'Red seat', img: 'product1.png' },
-    { id: 1, title: 'Blue seat', img: 'product2.png' },
+    { id: 1, title: 'White table', img: 'table.png' },
     { id: 2, title: 'Green seat', img: 'product1.png' },
     { id: 3, title: 'Black seat', img: 'product2.png' },
     { id: 4, title: 'Orange seat', img: 'product1.png' },
@@ -81,4 +67,4 @@ function init() {
     }
   });
 }
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJpbmRleC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyIvLz0gc3JjL2NvbXBvbmVudHMvSW5kZXgvbmF2aWdhdGlvbi9uYXYuanNcclxuLy89IHNyYy9jb21wb25lbnRzL1NlYXJjaC9IZXJvL3NlYXJjaC5qcyJdLCJmaWxlIjoiaW5kZXguanMifQ==
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJpbmRleC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdET01Db250ZW50TG9hZGVkJywgaW5pdCk7XHJcblxyXG5mdW5jdGlvbiBpbml0KCkge1xyXG4vLz0gc3JjL2NvbXBvbmVudHMvSW5kZXgvbmF2aWdhdGlvbi9uYXYuanNcclxuLy89IHNyYy9jb21wb25lbnRzL1NlYXJjaC9IZXJvL3NlYXJjaC5qc1xyXG59Il0sImZpbGUiOiJpbmRleC5qcyJ9
