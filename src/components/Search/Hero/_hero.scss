@@ -1,0 +1,80 @@
+.search-page {
+  @include overlayBackground(rgba($color: #fff, $alpha: 0.9), '../../../../img/bg.png');
+  min-height: 100vh;
+}
+
+.search-form {
+  margin-bottom: 75px;
+  @media screen and (max-width: 1931px) {
+    margin-top: 50px;
+  }
+
+  @include medium {
+    margin-top: 0;
+    padding-top: 100px;
+  }
+}
+
+.search-form__item {
+  position: relative;
+}
+
+.search-form__clear {
+  @include reset-btn;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e5e5e5;
+  font-size: 40px;
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: $primary-text;
+  }
+}
+
+.search-form__textfield {
+  @include font-size(140);
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba($color: #e5e5e5, $alpha: 1);
+  font-weight: 100;
+  color: $primary-text;
+  padding-right: 50px;
+
+  @media screen and (max-width: 1371px) {
+    @include font-size(70);
+  }
+
+  @include medium {
+    @include font-size(36);
+  }
+}
+
+.search-form__label {
+  @include font-size(36);
+  position: absolute;
+  left: 0;
+  bottom: -70px;
+  color: rgba($color: $primary-text, $alpha: 0.3);
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  @media screen and (max-width: 1371px) {
+    @include font-size(18);
+    bottom: -50px;
+  }
+
+  @include medium {
+    @include font-size(16);
+  }
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}

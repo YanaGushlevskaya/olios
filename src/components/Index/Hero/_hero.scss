@@ -1,0 +1,60 @@
+.main-page {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/bg.png) center bottom no-repeat/cover;
+
+  @include medium {
+    display: flex;
+    align-items: center;
+  }
+
+  @mixin small {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.main-page__description {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.main-page__title {
+  @include font-size(250);
+  text-transform: uppercase;
+  font-weight: 100;
+  line-height: 1;
+  margin-bottom: 30px;
+  letter-spacing: 6px;
+
+  @media screen and (max-width: 1371px) {
+    @include font-size(140);
+  }
+
+  @mixin small {
+    @include font-size(60);
+    margin-bottom: 15px;
+  }
+}
+
+.main-page__sub-title {
+  @include font-size(41);
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1371px) {
+    @include font-size(25);
+  }
+
+  @mixin small {
+    @include font-size(16);
+    margin-bottom: 35px;
+  }
+}
+
+.main-page__link {
+  @include link;
+}

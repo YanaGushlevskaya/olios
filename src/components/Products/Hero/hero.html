@@ -1,0 +1,40 @@
+<main class="content">
+  <div class="products-page">
+    {% include "components/Products/Header/header.html" %}
+
+    <div class="products">
+      <div class="container">
+        <ul class="products__list reset-list">
+          {% set items = [ { figureclass: 'products__card products__card--small', img: 'img/product1.png', alt: 'red
+          seat', title: 'red seat', subtitle: 'Lorem ipsum dolor sit amet.', price: '$45'}, { figureclass:
+          'products__card products__card--medium', img: 'img/table.png', alt: 'product 2', title: 'white table',
+          subtitle: 'Lorem ipsum dolor sit amet.', price: '$45' }, { figureclass: 'products__card
+          products__card--small', img: 'img/product1.png', alt: 'product 3', title: 'red seat', subtitle: 'Lorem ipsum
+          dolor sit amet.', price: '$45' }, { figureclass: 'products__card products__card--medium', img:
+          'img/table.png', alt: 'product 4', title:'white table', subtitle: 'Lorem ipsum dolor sit amet.', price:
+          '$45' }, { figureclass:'products__card products__card--small', img: 'img/product1.png', alt: 'product 5',
+          title: 'red seat', subtitle: 'Lorem ipsum dolor sit amet.', price: '$45' } ] %} 
+          
+          {% for item in items %}
+          <li class="products__item">
+            <a href="#" class="products__link reset-link">
+              <figure class='{{ item.figureclass }}'>
+                <div class="products__card-img-container">
+                  <img src='{{ item.img }}' alt='{{ item.alt }}' class="products__card-img" />
+                </div>
+
+                <figcaption class="products__card-description">
+                  <h3 class="products__card-title">{{ item.title }}</h3>
+                  <p class="products__card-sub-title">{{ item.subtitle }}</p>
+                  <span class="products__card-price">{{ item.price }}</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</main>

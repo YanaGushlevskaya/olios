@@ -1,0 +1,77 @@
+.main-aside {
+  padding: 30px 0 100px 0;
+  background: $third;
+  width: 144px;
+  height: 100vh;
+  box-shadow: $shadow;
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include medium {
+    bottom: 0;
+    top: auto;
+    height: auto;
+    width: 100%;
+    flex-flow: row nowrap;
+    padding: 15px;
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+}
+
+.main-aside__nav {
+  margin-top: 140px;
+  flex: 1 0;
+
+  @include medium {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+}
+
+.main-aside__nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  @include medium {
+    flex-flow: row nowrap;
+  }
+}
+
+.main-aside__nav-item {
+  &:not(:last-child) {
+    margin-bottom: 75px;
+
+    @include medium {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
+
+  &:last-child {
+    margin-top: auto;
+
+    @include medium {
+      margin-left: auto;
+    }
+  }
+}
+
+.main-aside__nav-link {
+  @include font-size(25);
+  color: #d8d8d8;
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: $primary;
+  }
+}

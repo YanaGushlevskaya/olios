@@ -1,0 +1,16 @@
+<aside class="main-aside">
+  {% include "components/Index/Logo/logo.html" %}
+
+    <nav class="main-aside__nav">
+      <ul class="main-aside__nav-list reset-list">
+        {% set items = [ { href:'index.html', class:'main-aside__nav-link', icon:'fas fa-home' }, { href:'products.html', class:'main-aside__nav-link', icon:'fas fa-cart-plus' }, { href:'search.html', class:'main-aside__nav-link nav__link--active', icon:'fas fa-search' }, { href:'#', class:'main-aside__nav-link', icon:'fas fa-download' }  ] %}
+        {% for item in items %}
+        <li class="main-aside__nav-item">
+          <a href="{{ item.href }}" class="{{ item.class }}">
+            <i class="{{ item.icon }}"></i>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+</aside>

@@ -1,0 +1,75 @@
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: $size / 16 + rem;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin link {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  background: $primary;
+  line-height: 1;
+  font-weight: 800;
+  font-size: 1.28rem;
+  color: #fff;
+  border: 1px solid $primary;
+  transition: color 0.2s linear, background 0.2s linear;
+  padding: 14px 50px;
+  border-radius: 35px;
+
+  &:hover {
+    color: $primary;
+    background: transparent;
+  }
+}
+
+@mixin reset-btn {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+@mixin medium {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: 591px) {
+    @content;
+  }
+}
+
+@mixin overlayBackground($color, $url) {
+  background: linear-gradient(to bottom, $color, $color), url($url) center center no-repeat/cover;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+}

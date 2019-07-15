@@ -1,0 +1,68 @@
+@include normalize();
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  @include font-size(14);
+  font-family: $base-font;
+  color: $primary-text;
+  background: $secondary;
+}
+
+.content {
+  flex: 1 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.57;
+  font-weight: 300;
+}
+
+.content {
+  padding-left: 144px;
+  min-height: 100vh;
+
+  @include medium {
+    padding-left: 0;
+  }
+}
+
+.container {
+  padding: 0 40px;
+  max-width: 1570px;
+  margin: 0 auto;
+}
+
+.page-offset {
+  padding: 140px 0;
+
+  @include medium {
+    padding: 0 0 75px 0;
+  }
+}
+
+.reset-link {
+  text-decoration: none;
+}
+
+.reset-list {
+  list-style: none;
+}

@@ -1,0 +1,24 @@
+<div class="nav-wrap">
+  <button class="nav-btn">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <nav class="nav">
+    <ul class="nav__list reset-list">
+      {% set items = [ { navtitle: 'Living room', navicon: 'img/room.png', alt: 'living room' }, { navtitle: 'Office',
+      navicon: 'img/office.png', alt: 'office' }, { navtitle: 'For kids', navicon: 'img/kids.png', alt: 'For kids' }, {
+      navtitle: 'Kitchen', navicon: 'img/kitchen.png', alt: 'Kitchen' }, { navtitle: 'accesories', navicon:
+      'img/accesories.png', alt: 'accesories' } ] %}     
+      {% for item in items %}
+      <li class="nav__item">
+        <a href="#" class="nav__link reset-link">
+          <span class="nav__title">{{ item.navtitle }}</span>
+          <span class="nav__icon">
+            <img src="{{ item.navicon }}" alt="{{ item.alt }}" />
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

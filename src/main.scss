@@ -1,0 +1,15 @@
+@import "normalize";
+@import "./assets/scss/vars";
+@import "./assets/scss/mixins";
+@import "./assets/scss/default";
+
+@import "./components/Index/aside/aside";
+@import "./components/Index/Hero/hero";
+@import "./components/Index/navigation/nav";
+
+@import "./components/Products/Header/header";
+@import "./components/Products/Hero/hero";
+
+@import "./components/Search/Hero/hero";
+@import "./components/Search/Hero/search-result";
+
