@@ -1,7 +1,7 @@
 
 # Multi-page responsive web-site
 
-[DEMO](https://yanagushlevskaya.github.io/olios/)
+[DEMO](https://yanagushlevskaya.github.io/olios/dist/)
 
 
 ## Simple Boilerplate-starter
